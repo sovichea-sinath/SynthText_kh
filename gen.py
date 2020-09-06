@@ -30,7 +30,7 @@ SECS_PER_IMG = 5 #max time per image in seconds
 DATA_PATH = 'data'
 DB_FNAME = osp.join(DATA_PATH,'dset.h5')
 # url of the data (google-drive public file):
-DATA_URL = 'http://www.robots.ox.ac.uk/~ankush/data.tar.gz'
+DATA_URL = 'http://wwdw.robots.ox.ac.uk/~ankush/data.tar.gz'
 OUT_FILE = 'results/SynthText.h5'
 
 def get_data():
