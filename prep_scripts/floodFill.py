@@ -119,7 +119,7 @@ def process_db_parallel(base_dir, th=0.11):
         print "got back : ", imname
         mask = mask.astype('uint16')
         mask_dset = dbo_mask.create_dataset(imname, data=mask)
-        mask_dset.attrs['area'] = area
+        mask_.attrs['area'] = area
         mask_dset.attrs['label'] = label
 
     # close the h5 files:

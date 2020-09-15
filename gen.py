@@ -29,8 +29,9 @@ SECS_PER_IMG = 5 #max time per image in seconds
 # path to the data-file, containing image, depth and segmentation:
 DATA_PATH = 'data'
 DB_FNAME = osp.join(DATA_PATH,'dset.h5')
+# DB_FNAME = osp.join(DATA_PATH,'depth.h5')
 # url of the data (google-drive public file):
-DATA_URL = 'http://wwdw.robots.ox.ac.uk/~ankush/data.tar.gz'
+DATA_URL = 'http://www.robots.ox.ac.uk/~vgg/data/scenetext/preproc/bg_img.tar.gz'
 OUT_FILE = 'results/SynthText.h5'
 
 def get_data():
@@ -72,7 +73,7 @@ def add_res_to_db(imgname,res,db):
     db['data'][dname].attrs['wordBB'] = res[i]['wordBB']        
     #db['data'][dname].attrs['txt'] = res[i]['txt']
     L = res[i]['txt']
-    L = [n.encode("ascii", "ignore") for n in L]
+    # L = [n.encode("ascii", "ignore") for n in L]
     db['data'][dname].attrs['txt'] = L
 
 
