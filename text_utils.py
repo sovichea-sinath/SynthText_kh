@@ -16,6 +16,7 @@ from PIL import Image
 import math
 from common import *
 import pickle
+import codecs
 
 def sample_weighted(p_dict):
     ps = list(p_dict.keys())
@@ -102,8 +103,10 @@ class RenderFont(object):
         self.baselinestate = BaselineState()
 
         # text-source : gets english text:
+        # self.text_source = TextSource(min_nchar=self.min_nchar,
+        #                               fn=osp.join(data_dir,'newsgroup/newsgroups.txt'))
         self.text_source = TextSource(min_nchar=self.min_nchar,
-                                      fn=osp.join(data_dir,'newsgroup/newsgroup.txt'))
+                                      fn=osp.join(data_dir,'newsgroup/khmergroups.txt'))
 
         # get font-state object:
         self.font_state = FontState(data_dir)
@@ -388,7 +391,7 @@ class RenderFont(object):
     def visualize_bb(self, text_arr, bbs):
         ta = text_arr.copy()
         for r in bbs:
-            cv.rectangle(ta, (r[0],r[1]), (r[0]+r[2],r[1]+r[3]), color=128, thickness=1)
+            cv2.rectangle(ta, (r[0],r[1]), (r[0]+r[2],r[1]+r[3]), color=128, thickness=1)
         plt.imshow(ta,cmap='gray')
         plt.show()
 
@@ -522,7 +525,7 @@ class TextSource(object):
                       'LINE':self.sample_line,
                       'PARA':self.sample_para}
 
-        with open(fn,'r') as f:
+        with codecs.open(fn, encoding='utf-8') as f:
             self.txt = [l.strip() for l in f.readlines()]
 
         # distribution over line/words for LINE/PARA:
