@@ -70,5 +70,6 @@ def main(db_fname):
     db.close()
 
 if __name__=='__main__':
-    main('results/SynthText.h5')
+    # main('results/SynthText.h5')
+    main('gen/dset.h5')
 
