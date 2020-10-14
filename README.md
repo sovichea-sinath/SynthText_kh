@@ -70,6 +70,6 @@ Note: I do not own the copyright to these images.
 - @youngkyung has adapted for Korean [here](https://github.com/youngkyung/SynthText_kr).
 - @kotomiDu has developed an interactive UI for generating images with text [here](https://github.com/kotomiDu/GameSynthText).
 
+
 ### Further Information
 Please refer to the paper for more information, or contact me (email address in the paper).
-

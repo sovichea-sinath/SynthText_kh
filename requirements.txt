@@ -1,0 +1,13 @@
+cycler
+h5py
+matplotlib
+numpy
+Pillow
+pygame
+pyparsing
+python-dateutil
+pytz
+scipy
+six
+wget
+opencv-python

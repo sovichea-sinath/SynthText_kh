@@ -8,7 +8,7 @@ import h5py
 import numpy as np
 from PIL import Image
 import os.path as osp
-import cPickle as cp
+import _pickle as cp
 
 im_dir = 'bg_img'
 depth_db = h5py.File('depth.h5','r')
