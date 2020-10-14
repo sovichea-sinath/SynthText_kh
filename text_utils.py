@@ -36,7 +36,6 @@ def crop_safe(arr, rect, bbs=[], pad=0):
     RECT: (x,y,w,h) : area to crop to
     BBS : nx4 xywh format bounding-boxes
     PAD : percentage to pad
-
     Does safe cropping. Returns the cropped rectangle and
     the adjusted bounding-boxes
     """
@@ -119,7 +118,6 @@ class RenderFont(object):
         font style FONT.
         A new line in text is denoted by \n, no other characters are 
         escaped. Other forms of white-spaces should be converted to space.
-
         returns the updated surface, words and the character bounding boxes.
         """
         # get the number of lines
@@ -424,7 +422,7 @@ class FontState(object):
         with open(char_freq_path,'rb') as f:
             #self.char_freq = cp.load(f)
             u = pickle._Unpickler(f)
-            u.encoding = 'latin1'
+            u.encoding = 'utf-8'
             p = u.load()
             self.char_freq = p
 
@@ -432,7 +430,7 @@ class FontState(object):
         with open(font_model_path,'rb') as f:
             #self.font_model = cp.load(f)
             u = pickle._Unpickler(f)
-            u.encoding = 'latin1'
+            u.encoding = 'utf-8'
             p = u.load()
             self.font_model = p
             

@@ -584,8 +584,8 @@ class RendererV3(object):
         seg   : HxW segmentation region masks
         area  : number of pixels in each region
         label : region labels == unique(seg) / {0}
-               i.e., indices of pixels in SEG which
-               constitute a region mask
+                i.e., indices of pixels in SEG which
+                constitute a region mask
         ninstance : no of times image should be
                     used to place text.
 
@@ -654,6 +654,7 @@ class RendererV3(object):
                                                          regions['homography'][ireg],
                                                          regions['homography_inv'][ireg])
                     else:
+                        # with time_limit(self.max_time):
                         with time_limit(self.max_time):
                             txt_render_res = self.place_text(img,place_masks[ireg],
                                                              regions['homography'][ireg],
