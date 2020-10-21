@@ -98,4 +98,5 @@ depth.h5
 seg.h5
 imnames.cp
 
-
+# Font
+khmerFonts/**
