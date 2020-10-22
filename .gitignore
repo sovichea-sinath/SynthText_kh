@@ -97,6 +97,8 @@ bg_img.tar.gz
 depth.h5
 seg.h5
 imnames.cp
+khmergroups.txt
+khmergroups_buffer.txt
 
 # Font
 khmerFonts/
